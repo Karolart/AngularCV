@@ -1,0 +1,43 @@
+// src/app/header/header.component.scss
+
+@import '../app.component.scss'; // Import your variables if needed
+
+header {
+  background-color: $primary-color; // Use your primary color from variables.scss
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid $secondary-color; // Use your secondary color from variables.scss
+
+  h1 {
+    font-family: $font-stack; // Use your font stack from variables.scss
+    font-size: 2.5rem;
+    color: #020014; // White color for the heading text
+    margin: 0 0 10px;
+  }
+
+  p {
+    font-family: $font-stack; // Use your font stack from variables.scss
+    font-size: 1rem;
+    color: #020014; // Light grey for the paragraph text
+    margin: 5px 0;
+
+    a {
+      color: $link-color; // Define this in your variables.scss
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a {
+    margin: 0 10px; // Space between LinkedIn and GitHub links
+    font-weight: bold;
+    color: $link-color; // Use your link color from variables.scss
+
+    &:hover {
+      color: lighten($link-color, 10%); // Lighter on hover
+    }
+  }
+}

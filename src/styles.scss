@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+// Base Styles
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; // Replace with your preferred font
+    scroll-behavior: smooth;  // Enables smooth scrolling across the page
+    background-color: #d1e2d8; // Light grey background for contrast
+  }
+  
+  // Section Styles
+  section {
+    padding: 60px 20px;
+    margin: 20px auto;
+    background-color: #fff;  // White background for sections
+    border-radius: 8px;
+    max-width: 800px;  // Limits the width of sections
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  // Adds subtle shadow to sections
+  }
+  
+  // Section Titles
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;  // Dark grey color for section titles
+  }
+  
+  // Skills Container Styles
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;  // Centers the skill items
+  }
+  
+  // Skill Item Styles
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  // Skill Item Image
+  .skill-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  // Skill Info
+  .skill-info {
+    strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+  
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+  

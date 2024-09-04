@@ -1,0 +1,48 @@
+// Import your variables (ensure this path is correct for your project structure)
+@import '../../styles/variables';
+
+section {
+  padding: 20px;
+  background-color: #7ad6a079;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;  // Centers the items horizontally
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;  // Stack image and text vertically
+  align-items: center;     // Center content horizontally
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;            // Increase padding for more uniform spacing
+  width: 100%;
+  max-width: 150px;
+  text-align: center;       // Center text within the item
+  
+  img {
+    max-width: 100%;        // Allow image to scale based on container width
+    height: auto;
+    margin-bottom: 15px;    // Space between image and text
+  }
+
+  .skill-info {
+    strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}
