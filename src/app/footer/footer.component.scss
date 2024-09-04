@@ -1,0 +1,11 @@
+footer {
+  color: #1d6679;  // White text color for contrast
+  padding: 20px;  // Padding around the footer content
+  text-align: center;  // Center-align the text
+  font-size: 0.9rem;  // Slightly smaller font size for the footer text
+  border-top: 1px solid #444;  // Optional border at the top of the footer
+  
+  p {
+    margin: 0;  // Remove default margin from the paragraph
+  }
+}
