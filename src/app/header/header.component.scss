@@ -1,43 +1,99 @@
 // src/app/header/header.component.scss
 
-@import '../app.component.scss'; // Import your variables if needed
+@import '../app.component.scss';
 
 header {
-  background-color: $primary-color; // Use your primary color from variables.scss
-  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    darken($primary-color, 8%) 100%
+  );
+  padding: 60px 20px 40px;
   text-align: center;
-  border-bottom: 2px solid $secondary-color; // Use your secondary color from variables.scss
+  border-bottom: 1px solid rgba($secondary-color, 0.3);
+  position: relative;
+
+  // efecto sutil de glow
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 40px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba($secondary-color, 0.25),
+      transparent 70%
+    );
+    filter: blur(20px);
+    pointer-events: none;
+  }
 
   h1 {
-    font-family: $font-stack; // Use your font stack from variables.scss
-    font-size: 2.5rem;
-    color: #020014; // White color for the heading text
-    margin: 0 0 10px;
+    font-family: $font-stack;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #020014;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
   }
 
   p {
-    font-family: $font-stack; // Use your font stack from variables.scss
-    font-size: 1rem;
-    color: #020014; // Light grey for the paragraph text
-    margin: 5px 0;
+    font-family: $font-stack;
+    font-size: 1.05rem;
+    color: rgba(#020014, 0.75);
+    margin: 6px 0;
 
     a {
-      color: $link-color; // Define this in your variables.scss
+      color: $link-color;
       text-decoration: none;
+      position: relative;
+      font-weight: 500;
 
-      &:hover {
-        text-decoration: underline;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 2px;
+        background: $link-color;
+        transition: width 0.25s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
       }
     }
   }
 
+  // contenedor para links (recomendado envolverlos en un div)
+  .links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
   a {
-    margin: 0 10px; // Space between LinkedIn and GitHub links
-    font-weight: bold;
-    color: $link-color; // Use your link color from variables.scss
+    font-family: $font-stack;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba($secondary-color, 0.08);
+    color: $link-color;
+    text-decoration: none;
+    transition: all 0.25s ease;
 
     &:hover {
-      color: lighten($link-color, 10%); // Lighter on hover
+      background: $secondary-color;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba($secondary-color, 0.25);
     }
   }
 }
